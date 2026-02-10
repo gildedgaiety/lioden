@@ -1,20 +1,31 @@
 ﻿/* =====================================================
-   PASTEL BLUE & YELLOW — FULL LIODEN CSS (ALL-IN-ONE)
+   PASTEL BLUE & YELLOW — FULL LIODEN CSS (FIXED)
    ===================================================== */
 
-/* GLOBAL BACKGROUND */
-html, body {
-    background: linear-gradient(135deg, #e8f4ff 0%, #fff3c4 100%) !important;
+/* ================= BACKGROUND GRADIENT (REAL FIX) ================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient( 135deg, #e8f4ff 0%, #f1f8ff 40%, #fff3c4 100% );
+    z-index: -1;
+}
+
+/* ================= BASE ================= */
+
+body {
     color: #4a5a6a;
     font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
-/* MAIN CONTAINER */
+/* ================= MAIN CONTAINER ================= */
+
 .container {
     background: #ffffff;
     border-radius: 26px;
     padding: 16px;
-    box-shadow: 0 0 30px rgba(180,200,230,0.4);
+    box-shadow: 0 0 30px rgba(180,200,230,0.45);
 }
 
 /* ================= TOP AREA ================= */
@@ -77,49 +88,43 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
-/* ================= TABLES (FORCED TD) ================= */
+/* ================= TABLES (HARD OVERRIDE) ================= */
 
 table {
     border-collapse: separate !important;
-    border-spacing: 0;
+    border-spacing: 0 !important;
     border-radius: 18px;
     overflow: hidden;
 }
 
-.table,
-#lion_content table,
-#main table {
-    background: #f6fbff;
-}
-
-    /* HEADERS */
-    .table th {
+    /* TABLE HEADERS */
+    table th {
         background: #dff1ff !important;
         color: #4f6f8f !important;
     }
 
-    /* ALL TD CELLS */
-    .table > tbody > tr > td,
-    .table > thead > tr > td,
-    .table > tfoot > tr > td,
+    /* FORCE ALL TD CELLS */
+    table td,
+    .table td,
+    #lion_content td,
     #lion_content table td,
+    #main td,
     #main table td,
-    table td {
-        background: linear-gradient(to bottom, #ffffff, #f8fbff) !important;
+    td[style] {
+        background: linear-gradient( to bottom, #ffffff, #f3f9ff ) !important;
         color: #4a5a6a !important;
         border: none !important;
         padding: 6px !important;
     }
 
     /* ALTERNATING ROWS */
-    .table > tbody > tr:nth-child(even) > td,
-    #lion_content table tr:nth-child(even) td,
-    #main table tr:nth-child(even) td {
-        background: #f1f8ff !important;
+    table tr:nth-child(even) td,
+    #lion_content table tr:nth-child(even) td {
+        background: #eef6ff !important;
     }
 
-    /* TABLE HOVER */
-    .table > tbody > tr:hover > td,
+    /* HOVER CONFIRMATION */
+    table tr:hover td,
     #lion_content table tr:hover td {
         background: #fff2b8 !important;
         transition: background 0.25s ease;
@@ -246,20 +251,12 @@ select {
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-    /* SOFT HOVER ANIMATION */
+    /* SOFT HOVER */
     .cave-grid:hover,
     .mound-grid:hover {
         transform: translateY(-4px);
         box-shadow: 0 8px 20px rgba(140,180,255,0.35), 0 0 12px rgba(255,230,140,0.4);
     }
-
-/* OPTIONAL: HIDE DEFAULT TEXT */
-/*
-.cave-grid h3,
-.mound-grid h3 {
-    display: none;
-}
-*/
 
 /* ================= SCROLLBAR ================= */
 
