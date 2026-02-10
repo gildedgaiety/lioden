@@ -1,8 +1,10 @@
-﻿/* === PASTEL BLUE & YELLOW | FULL LIODEN CSS === */
+﻿/* =====================================================
+   PASTEL BLUE & YELLOW — FULL LIODEN CSS (ALL-IN-ONE)
+   ===================================================== */
 
-/* BODY */
-body {
-    background: #f5faff;
+/* GLOBAL BACKGROUND */
+html, body {
+    background: linear-gradient(135deg, #e8f4ff 0%, #fff3c4 100%) !important;
     color: #4a5a6a;
     font-family: "Trebuchet MS", Arial, sans-serif;
 }
@@ -10,12 +12,13 @@ body {
 /* MAIN CONTAINER */
 .container {
     background: #ffffff;
-    border-radius: 24px;
+    border-radius: 26px;
     padding: 16px;
-    box-shadow: 0 0 25px rgba(180,200,230,0.35);
+    box-shadow: 0 0 30px rgba(180,200,230,0.4);
 }
 
-/* TOP BAR */
+/* ================= TOP AREA ================= */
+
 #top {
     background: linear-gradient(to right, #dff1ff, #fff6cc);
     border-bottom: 3px solid #ffe38a;
@@ -30,12 +33,12 @@ body {
             color: #f0b400 !important;
         }
 
-    /* LOGO */
     #top img {
         filter: brightness(1.05) saturate(1.1);
     }
 
-/* NAV BAR */
+/* ================= NAVBAR ================= */
+
 .navbar {
     background: #eef7ff;
     border-radius: 18px;
@@ -53,47 +56,77 @@ body {
             color: #b89000 !important;
         }
 
-/* LEFT SIDEBAR */
+/* ================= PANELS ================= */
+
 .col-md-3 {
     background: #f4faff;
     border-radius: 20px;
     padding: 12px;
 }
 
-/* MAIN CONTENT */
 .col-md-9 {
     background: #fcfeff;
     border-radius: 20px;
     padding: 15px;
 }
 
-/* HEADERS */
+/* ================= HEADERS ================= */
+
 h1, h2, h3, h4 {
     color: #6c95c4;
     text-align: center;
 }
 
-/* TABLES */
-.table {
-    background: #f6fbff;
+/* ================= TABLES (FORCED TD) ================= */
+
+table {
+    border-collapse: separate !important;
+    border-spacing: 0;
     border-radius: 18px;
     overflow: hidden;
 }
 
+.table,
+#lion_content table,
+#main table {
+    background: #f6fbff;
+}
+
+    /* HEADERS */
     .table th {
-        background: #dff1ff;
-        color: #4f6f8f;
+        background: #dff1ff !important;
+        color: #4f6f8f !important;
     }
 
-    .table td {
-        background: #ffffff;
+    /* ALL TD CELLS */
+    .table > tbody > tr > td,
+    .table > thead > tr > td,
+    .table > tfoot > tr > td,
+    #lion_content table td,
+    #main table td,
+    table td {
+        background: linear-gradient(to bottom, #ffffff, #f8fbff) !important;
+        color: #4a5a6a !important;
+        border: none !important;
+        padding: 6px !important;
     }
 
-    .table tr:nth-child(even) td {
-        background: #f1f8ff;
+    /* ALTERNATING ROWS */
+    .table > tbody > tr:nth-child(even) > td,
+    #lion_content table tr:nth-child(even) td,
+    #main table tr:nth-child(even) td {
+        background: #f1f8ff !important;
     }
 
-/* LINKS */
+    /* TABLE HOVER */
+    .table > tbody > tr:hover > td,
+    #lion_content table tr:hover td {
+        background: #fff2b8 !important;
+        transition: background 0.25s ease;
+    }
+
+/* ================= LINKS ================= */
+
 a {
     color: #6fa3d9;
 }
@@ -103,7 +136,8 @@ a {
         text-decoration: none;
     }
 
-/* BUTTONS (ALL OF THEM) */
+/* ================= BUTTONS ================= */
+
 input[type="submit"],
 button,
 .btn,
@@ -124,7 +158,8 @@ button,
         background: #ffe38a;
     }
 
-/* FORMS & INPUTS */
+/* ================= FORMS ================= */
+
 input,
 textarea,
 select {
@@ -141,7 +176,8 @@ select {
         box-shadow: 0 0 8px rgba(180,210,255,0.6);
     }
 
-/* ALERTS */
+/* ================= ALERTS ================= */
+
 .alert,
 .alert-warning,
 .alert-success,
@@ -152,7 +188,8 @@ select {
     border-radius: 18px;
 }
 
-/* PROGRESS BARS */
+/* ================= PROGRESS BARS ================= */
+
 .progress {
     background: #eaf4ff;
     border-radius: 20px;
@@ -163,7 +200,8 @@ select {
     border-radius: 20px;
 }
 
-/* CHAT */
+/* ================= CHAT ================= */
+
 .chatMessageContainer {
     background: #f4faff !important;
     border-radius: 14px;
@@ -173,52 +211,58 @@ select {
         background: #fff9dd !important;
     }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 .footer {
     background: #eef7ff;
     color: #6c95c4;
     border-radius: 18px;
 }
 
-/* CAVES */
+/* ================= CAVES & MOUNDS ================= */
+
+/* REPLACE IMAGE URLS */
+.cave-grid img,
+.cave-grid-header img,
+.cave-grid h3 img {
+    content: url("https://i.imgur.com/PASTE_CAVE_IMAGE.png");
+    width: 100%;
+    border-radius: 18px;
+}
+
+.mound-grid img,
+.mound-grid-header img {
+    content: url("https://i.imgur.com/PASTE_MOUND_IMAGE.png");
+    width: 100%;
+    border-radius: 18px;
+}
+
+/* CARD STYLE */
 .cave-grid,
-.cave-grid-header {
+.mound-grid {
     background: #f4faff;
     border-radius: 18px;
     padding: 10px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* MOUNDS */
-.mound-grid,
-.mound-grid-header {
-    background: #fff9dd;
-    border-radius: 18px;
-    padding: 10px;
-}
-
-/* DROPDOWNS */
-.dropdown-menu {
-    background: #f6fbff;
-    border-radius: 16px;
-    border: none;
-}
-
-    .dropdown-menu li a:hover {
-        background: #fff2b8;
+    /* SOFT HOVER ANIMATION */
+    .cave-grid:hover,
+    .mound-grid:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(140,180,255,0.35), 0 0 12px rgba(255,230,140,0.4);
     }
 
-/* PAGINATION */
-.pagination li a {
-    background: #f4faff;
-    border-radius: 14px;
-    color: #6fa3d9;
+/* OPTIONAL: HIDE DEFAULT TEXT */
+/*
+.cave-grid h3,
+.mound-grid h3 {
+    display: none;
 }
+*/
 
-    .pagination li a:hover {
-        background: #fff2b8;
-    }
+/* ================= SCROLLBAR ================= */
 
-/* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -235,25 +279,3 @@ select {
     ::-webkit-scrollbar-thumb:hover {
         background: #f0c400;
     }
-/* === SOFT HOVER ANIMATION === */
-
-.cave-grid,
-.mound-grid {
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-    .cave-grid:hover,
-    .mound-grid:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(140,180,255,0.35), 0 0 12px rgba(255,230,140,0.4);
-    }
-    .cave-grid img,
-    .mound-grid img {
-        opacity: 0.95;
-        transition: opacity 0.3s ease;
-    }
-
-        .cave-grid img:hover,
-        .mound-grid img:hover {
-            opacity: 1;
-        }
