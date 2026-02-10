@@ -1,26 +1,23 @@
 ﻿/* =====================================================
-   PASTEL BLUE & YELLOW — FULL LIODEN CSS (FIXED)
+   FULL PASTEL YELLOW + BLUE LIODEN CSS (ALL-IN-ONE)
    ===================================================== */
 
-/* ================= BACKGROUND GRADIENT (REAL FIX) ================= */
-
+/* ================= BACKGROUND GRADIENT ================= */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: linear-gradient( 135deg, #e8f4ff 0%, #f1f8ff 40%, #fff3c4 100% );
+    background: linear-gradient(135deg, #fff9c4 0%, #e8f4ff 100%);
     z-index: -1;
 }
 
 /* ================= BASE ================= */
-
 body {
     color: #4a5a6a;
     font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 /* ================= MAIN CONTAINER ================= */
-
 .container {
     background: #ffffff;
     border-radius: 26px;
@@ -29,9 +26,8 @@ body {
 }
 
 /* ================= TOP AREA ================= */
-
 #top {
-    background: linear-gradient(to right, #dff1ff, #fff6cc);
+    background: linear-gradient(to right, #fff9c4, #dff1ff);
     border-bottom: 3px solid #ffe38a;
 }
 
@@ -49,7 +45,6 @@ body {
     }
 
 /* ================= NAVBAR ================= */
-
 .navbar {
     background: #eef7ff;
     border-radius: 18px;
@@ -68,7 +63,6 @@ body {
         }
 
 /* ================= PANELS ================= */
-
 .col-md-3 {
     background: #f4faff;
     border-radius: 20px;
@@ -82,14 +76,12 @@ body {
 }
 
 /* ================= HEADERS ================= */
-
 h1, h2, h3, h4 {
     color: #6c95c4;
     text-align: center;
 }
 
-/* ================= TABLES (HARD OVERRIDE) ================= */
-
+/* ================= TABLES ================= */
 table {
     border-collapse: separate !important;
     border-spacing: 0 !important;
@@ -97,41 +89,46 @@ table {
     overflow: hidden;
 }
 
-    /* TABLE HEADERS */
     table th {
         background: #dff1ff !important;
         color: #4f6f8f !important;
     }
 
-    /* FORCE ALL TD CELLS */
+    /* ================= TD CELLS + NESTED ELEMENTS ================= */
     table td,
     .table td,
     #lion_content td,
     #lion_content table td,
     #main td,
     #main table td,
-    td[style] {
-        background: linear-gradient( to bottom, #ffffff, #f3f9ff ) !important;
+    td[style],
+    td *,
+    td *:not(img) { /* avoid overriding images */
+        background: linear-gradient(to bottom, #ffffff, #f3f9ff) !important;
+        background-image: none !important;
         color: #4a5a6a !important;
         border: none !important;
         padding: 6px !important;
+        border-radius: 12px !important;
     }
 
-    /* ALTERNATING ROWS */
+    /* Alternating row colors */
     table tr:nth-child(even) td,
     #lion_content table tr:nth-child(even) td {
         background: #eef6ff !important;
     }
 
-    /* HOVER CONFIRMATION */
+    /* Hover effect for td and nested elements */
     table tr:hover td,
-    #lion_content table tr:hover td {
+    #lion_content table tr:hover td,
+    table tr:hover td *,
+    #lion_content table tr:hover td * {
         background: #fff2b8 !important;
+        background-image: none !important;
         transition: background 0.25s ease;
     }
 
 /* ================= LINKS ================= */
-
 a {
     color: #6fa3d9;
 }
@@ -142,7 +139,6 @@ a {
     }
 
 /* ================= BUTTONS ================= */
-
 input[type="submit"],
 button,
 .btn,
@@ -164,7 +160,6 @@ button,
     }
 
 /* ================= FORMS ================= */
-
 input,
 textarea,
 select {
@@ -182,7 +177,6 @@ select {
     }
 
 /* ================= ALERTS ================= */
-
 .alert,
 .alert-warning,
 .alert-success,
@@ -194,7 +188,6 @@ select {
 }
 
 /* ================= PROGRESS BARS ================= */
-
 .progress {
     background: #eaf4ff;
     border-radius: 20px;
@@ -206,7 +199,6 @@ select {
 }
 
 /* ================= CHAT ================= */
-
 .chatMessageContainer {
     background: #f4faff !important;
     border-radius: 14px;
@@ -217,7 +209,6 @@ select {
     }
 
 /* ================= FOOTER ================= */
-
 .footer {
     background: #eef7ff;
     color: #6c95c4;
@@ -225,8 +216,6 @@ select {
 }
 
 /* ================= CAVES & MOUNDS ================= */
-
-/* REPLACE IMAGE URLS */
 .cave-grid img,
 .cave-grid-header img,
 .cave-grid h3 img {
@@ -242,7 +231,6 @@ select {
     border-radius: 18px;
 }
 
-/* CARD STYLE */
 .cave-grid,
 .mound-grid {
     background: #f4faff;
@@ -251,7 +239,6 @@ select {
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-    /* SOFT HOVER */
     .cave-grid:hover,
     .mound-grid:hover {
         transform: translateY(-4px);
@@ -259,7 +246,6 @@ select {
     }
 
 /* ================= SCROLLBAR ================= */
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -276,29 +262,3 @@ select {
     ::-webkit-scrollbar-thumb:hover {
         background: #f0c400;
     }
-/* ================= FORCE TD NESTED ELEMENTS ================= */
-
-/* Top and bottom content inside table cells */
-td .top,
-td .bottom,
-td .top *,
-td .bottom * {
-    background: linear-gradient(to bottom, #ffffff, #f3f9ff) !important;
-    color: #4a5a6a !important;
-}
-
-/* Hover effect for nested elements */
-td:hover .top,
-td:hover .bottom,
-td:hover .top *,
-td:hover .bottom * {
-    background: #fff2b8 !important;
-    transition: background 0.25s ease;
-}
-
-/* Optional rounded corners for top/bottom */
-td .top,
-td .bottom {
-    border-radius: 12px !important;
-    padding: 4px !important;
-}
