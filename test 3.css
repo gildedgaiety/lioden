@@ -276,3 +276,29 @@ select {
     ::-webkit-scrollbar-thumb:hover {
         background: #f0c400;
     }
+/* ================= FORCE TD NESTED ELEMENTS ================= */
+
+/* Top and bottom content inside table cells */
+td .top,
+td .bottom,
+td .top *,
+td .bottom * {
+    background: linear-gradient(to bottom, #ffffff, #f3f9ff) !important;
+    color: #4a5a6a !important;
+}
+
+/* Hover effect for nested elements */
+td:hover .top,
+td:hover .bottom,
+td:hover .top *,
+td:hover .bottom * {
+    background: #fff2b8 !important;
+    transition: background 0.25s ease;
+}
+
+/* Optional rounded corners for top/bottom */
+td .top,
+td .bottom {
+    border-radius: 12px !important;
+    padding: 4px !important;
+}
