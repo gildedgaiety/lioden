@@ -1,0 +1,114 @@
+/* === SOFT GREEN LIODEN THEME === */
+
+/* Page background */
+body {
+	background: #eef5ee url("https://www.lioden.com/images/dust.png") repeat;
+	color: #3f5a3f;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* Main container */
+.container {
+	background: #f8fbf8;
+	border-radius: 20px;
+	padding: 15px;
+	box-shadow: 0 0 15px rgba(120,160,120,0.25);
+}
+
+/* Topbar */
+.topbar {
+	background: linear-gradient(to right, #cfe6cf, #e7f3e7);
+	border-radius: 15px;
+}
+
+/* Navigation bar */
+.navbar {
+	background: #dbeedb;
+	border-radius: 15px;
+}
+
+	.navbar li a {
+		color: #4b6b4b !important;
+		font-weight: 600;
+		transition: 0.3s;
+	}
+
+		.navbar li a:hover {
+			background: #c3dec3 !important;
+			border-radius: 12px;
+			color: #2f4f2f !important;
+		}
+
+/* Sidebars */
+.col-md-3 {
+	background: #f0f7f0;
+	border-radius: 18px;
+	padding: 12px;
+}
+
+/* Main content area */
+.col-md-9 {
+	background: #f9fdf9;
+	border-radius: 18px;
+	padding: 15px;
+}
+
+/* Tables */
+.table {
+	background: #f3faf3;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+	.table th {
+		background: #cfe6cf;
+		color: #355735;
+	}
+
+	.table td {
+		background: #eef6ee;
+	}
+
+/* Headers */
+h1, h2, h3, h4 {
+	color: #3b633b;
+	text-align: center;
+}
+
+/* Links */
+a {
+	color: #5a8f5a;
+}
+
+	a:hover {
+		color: #3f6f3f;
+		text-decoration: none;
+	}
+
+/* Buttons */
+input[type="submit"], button {
+	background: #b7dcb7;
+	color: #2f4f2f;
+	border: none;
+	border-radius: 20px;
+	padding: 6px 12px;
+	transition: 0.3s;
+}
+
+	input[type="submit"]:hover, button:hover {
+		background: #9fcb9f;
+	}
+
+/* Scrollbar (Chrome/Edge) */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #edf6ed;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #b7dcb7;
+	border-radius: 10px;
+}
