@@ -1,14 +1,13 @@
 /* =====================================================
-   PASTEL YELLOW + BLUE LIODEN CSS — FULL ALL-IN-ONE
-   (<td>, <th>, <div class="left"> unified, no <td> hover)
+   FULL PASTEL YELLOW + BLUE LIODEN CSS (ALL-IN-ONE)
    ===================================================== */
 
-/* ================= BACKGROUND ================= */
+/* ================= BACKGROUND GRADIENT ================= */
 body::before {
 	content: "";
 	position: fixed;
 	inset: 0;
-	background: #fff9c4; /* solid pastel yellow main background */
+	background: linear-gradient(135deg, #fff9c4 0%, #e8f4ff 100%);
 	z-index: -1;
 }
 
@@ -91,10 +90,8 @@ table {
 }
 
 	table th {
-		background: linear-gradient(to bottom, #ffffff, #f3f9ff) !important; /* same as td */
-		color: #4a5a6a !important;
-		border-radius: 12px !important;
-		padding: 6px !important;
+		background: #dff1ff !important;
+		color: #4f6f8f !important;
 	}
 
 	/* ================= TD CELLS + NESTED ELEMENTS ================= */
@@ -106,9 +103,8 @@ table {
 	#main table td,
 	td[style],
 	td *,
-	td *:not(img),
-	div.left { /* added div.left */
-		background: linear-gradient(to bottom, #ffffff, #f3f9ff) !important; /* pastel blue gradient */
+	td *:not(img) { /* avoid overriding images */
+		background: linear-gradient(to bottom, #ffffff, #f3f9ff) !important;
 		background-image: none !important;
 		color: #4a5a6a !important;
 		border: none !important;
@@ -120,6 +116,16 @@ table {
 	table tr:nth-child(even) td,
 	#lion_content table tr:nth-child(even) td {
 		background: #eef6ff !important;
+	}
+
+	/* Hover effect for td and nested elements */
+	table tr:hover td,
+	#lion_content table tr:hover td,
+	table tr:hover td *,
+	#lion_content table tr:hover td * {
+		background: #fff2b8 !important;
+		background-image: none !important;
+		transition: background 0.25s ease;
 	}
 
 /* ================= LINKS ================= */
