@@ -1,0 +1,264 @@
+﻿/* =====================================================
+   FULL PASTEL YELLOW + BLUE LIODEN CSS (ALL-IN-ONE)
+   ===================================================== */
+
+/* ================= BACKGROUND GRADIENT ================= */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #fff9c4 0%, #e8f4ff 100%);
+    z-index: -1;
+}
+
+/* ================= BASE ================= */
+body {
+    color: #4a5a6a;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.container {
+    background: #ffffff;
+    border-radius: 26px;
+    padding: 16px;
+    box-shadow: 0 0 30px rgba(180,200,230,0.45);
+}
+
+/* ================= TOP AREA ================= */
+#top {
+    background: linear-gradient(to right, #fff9c4, #dff1ff);
+    border-bottom: 3px solid #ffe38a;
+}
+
+    #top a {
+        color: #5a7fa6 !important;
+        font-weight: 600;
+    }
+
+        #top a:hover {
+            color: #f0b400 !important;
+        }
+
+    #top img {
+        filter: brightness(1.05) saturate(1.1);
+    }
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #eef7ff;
+    border-radius: 18px;
+}
+
+    .navbar li a {
+        color: #5a82aa !important;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+        .navbar li a:hover {
+            background: #fff2b8 !important;
+            border-radius: 14px;
+            color: #b89000 !important;
+        }
+
+/* ================= PANELS ================= */
+.col-md-3 {
+    background: #f4faff;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+.col-md-9 {
+    background: #fcfeff;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/* ================= HEADERS ================= */
+h1, h2, h3, h4 {
+    color: #6c95c4;
+    text-align: center;
+}
+
+/* ================= TABLES ================= */
+table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+    table th {
+        background: #dff1ff !important;
+        color: #4f6f8f !important;
+    }
+
+    /* ================= TD CELLS + NESTED ELEMENTS ================= */
+    table td,
+    .table td,
+    #lion_content td,
+    #lion_content table td,
+    #main td,
+    #main table td,
+    td[style],
+    td *,
+    td *:not(img) { /* avoid overriding images */
+        background: linear-gradient(to bottom, #ffffff, #f3f9ff) !important;
+        background-image: none !important;
+        color: #4a5a6a !important;
+        border: none !important;
+        padding: 6px !important;
+        border-radius: 12px !important;
+    }
+
+    /* Alternating row colors */
+    table tr:nth-child(even) td,
+    #lion_content table tr:nth-child(even) td {
+        background: #eef6ff !important;
+    }
+
+    /* Hover effect for td and nested elements */
+    table tr:hover td,
+    #lion_content table tr:hover td,
+    table tr:hover td *,
+    #lion_content table tr:hover td * {
+        background: #fff2b8 !important;
+        background-image: none !important;
+        transition: background 0.25s ease;
+    }
+
+/* ================= LINKS ================= */
+a {
+    color: #6fa3d9;
+}
+
+    a:hover {
+        color: #f0b400;
+        text-decoration: none;
+    }
+
+/* ================= BUTTONS ================= */
+input[type="submit"],
+button,
+.btn,
+.btn-default,
+.btn-primary {
+    background: #fff2b8;
+    color: #8a6a00;
+    border: none;
+    border-radius: 22px;
+    padding: 6px 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+    input[type="submit"]:hover,
+    button:hover,
+    .btn:hover {
+        background: #ffe38a;
+    }
+
+/* ================= FORMS ================= */
+input,
+textarea,
+select {
+    background: #ffffff;
+    color: #4a5a6a;
+    border: 2px solid #d6ecff;
+    border-radius: 16px;
+}
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: none;
+        box-shadow: 0 0 8px rgba(180,210,255,0.6);
+    }
+
+/* ================= ALERTS ================= */
+.alert,
+.alert-warning,
+.alert-success,
+.alert-danger {
+    background: #fff9dd;
+    color: #7a6300;
+    border: none;
+    border-radius: 18px;
+}
+
+/* ================= PROGRESS BARS ================= */
+.progress {
+    background: #eaf4ff;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    background: linear-gradient(to right, #8fc4ff, #ffe38a);
+    border-radius: 20px;
+}
+
+/* ================= CHAT ================= */
+.chatMessageContainer {
+    background: #f4faff !important;
+    border-radius: 14px;
+}
+
+    .chatMessageContainer:nth-child(even) {
+        background: #fff9dd !important;
+    }
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #eef7ff;
+    color: #6c95c4;
+    border-radius: 18px;
+}
+
+/* ================= CAVES & MOUNDS ================= */
+.cave-grid img,
+.cave-grid-header img,
+.cave-grid h3 img {
+    content: url("https://i.imgur.com/PASTE_CAVE_IMAGE.png");
+    width: 100%;
+    border-radius: 18px;
+}
+
+.mound-grid img,
+.mound-grid-header img {
+    content: url("https://i.imgur.com/PASTE_MOUND_IMAGE.png");
+    width: 100%;
+    border-radius: 18px;
+}
+
+.cave-grid,
+.mound-grid {
+    background: #f4faff;
+    border-radius: 18px;
+    padding: 10px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+    .cave-grid:hover,
+    .mound-grid:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(140,180,255,0.35), 0 0 12px rgba(255,230,140,0.4);
+    }
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f8ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffe38a;
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #f0c400;
+    }
