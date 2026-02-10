@@ -228,49 +228,19 @@ img {
     box-shadow: 0 0 14px var(--border-glow);
     color: #cfd6ff;
 }
-/* =========================
-   LIODEN DEN CONTENT TRANSPARENCY FIX
-   ========================= */
-
-/* Kill content block backgrounds */
-.left,
-.feature,
-.cave-grid,
-.mound-grid,
-.inner-table td,
-.inner-table th {
-    background: transparent !important;
-    box-shadow: none !important;
+/* Make main content fully transparent */
+#pageContainer,
+.col-md-9,
+.col-md-9.col-xs-12 {
+    background: rgba(0,0,0,0) !important; /* fully transparent */
+    box-shadow: none !important; /* remove any shadows if applied */
+    min-height: auto !important; /* optional: remove fixed height */
+    padding-top: 25px; /* keep spacing */
 }
 
-/* Tables themselves keep glass, cells go transparent */
-.table {
-    background: rgba(25, 30, 40, 0.85) !important;
-}
-
-    .table td,
-    .table th {
+    /* If pseudo-elements exist */
+    .col-md-9::before,
+    .col-md-9::after {
         background: transparent !important;
+        content: none !important;
     }
-
-/* Comments strip */
-.comment,
-.comment:nth-child(even) {
-    background: transparent !important;
-}
-
-/* Alerts already styled, but ensure no fallback bg leaks */
-.alert {
-    background: rgba(25, 30, 40, 0.85) !important;
-}
-
-/* Feature blocks (Feed All / Play All) */
-.feature {
-    border-radius: 14px;
-    padding: 10px;
-}
-
-/* FINAL safety net — only inside pageContainer */
-#pageContainer div {
-    background-color: transparent !important;
-}
