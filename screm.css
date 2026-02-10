@@ -5,7 +5,7 @@
 /* ================= MAIN BACKGROUND ================= */
 html,
 body {
-    background-color: #fff9c4 !important; /* pastel yellow */
+    background-color: #f5eda4 !important; /* pastel yellow */
     color: #4a5a6a;
     font-family: "Trebuchet MS", Arial, sans-serif;
 }
@@ -20,7 +20,7 @@ body {
 
 /* ================= TOP BAR ================= */
 #top {
-    background: linear-gradient(to right, #fff9c4, #e3f2ff) !important;
+    background: linear-gradient(to right, #f5eda4, #e3f2ff) !important;
     border-bottom: 3px solid #ffe38a;
 }
 
@@ -45,7 +45,7 @@ body {
     }
 
         .navbar a:hover {
-            background-color: #fff2b8 !important;
+            background-color: #f5eda4 !important;
             border-radius: 14px;
         }
 
@@ -106,7 +106,7 @@ a {
 input[type="submit"],
 button,
 .btn {
-    background-color: #fff2b8 !important;
+    background-color: #f5eda4 !important;
     color: #8a6a00 !important;
     border: none !important;
     border-radius: 22px;
@@ -132,7 +132,7 @@ select {
 
 /* ================= ALERTS ================= */
 .alert {
-    background-color: #fff9dd !important;
+    background-color: #f5eda4 !important;
     color: #7a6300;
     border-radius: 18px;
     border: none;
@@ -156,7 +156,7 @@ select {
 }
 
     .chatMessageContainer:nth-child(even) {
-        background-color: #fff9dd !important;
+        background-color: #f5eda4 !important;
     }
 
 /* ================= FOOTER ================= */
