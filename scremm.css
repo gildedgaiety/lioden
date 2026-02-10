@@ -1,26 +1,31 @@
 /* =====================================================
-   LIODEN PASTEL YELLOW + BLUE — FULL REBUILD
+   LIODEN IMAGE BACKGROUND + CUSTOM CAVES/MOUNDS
+   FULLY FIXED VERSION
    ===================================================== */
 
-/* ================= MAIN BACKGROUND ================= */
+/* ================= MAIN BACKGROUND IMAGE ================= */
 html,
 body {
-    background-color: #f5eda4 !important; /* pastel yellow */
+    background-image: url("https://i.postimg.cc/WpXnw1rp/blue_and_yellow_pastel_color_background_free_photo.jpg") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
     color: #4a5a6a;
     font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 /* ================= PAGE WRAPPER ================= */
 .container {
-    background-color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.88) !important;
     border-radius: 24px;
     padding: 16px;
-    box-shadow: 0 0 25px rgba(180, 200, 230, 0.45);
+    box-shadow: 0 0 30px rgba(180, 200, 230, 0.5);
 }
 
 /* ================= TOP BAR ================= */
 #top {
-    background: linear-gradient(to right, #f5eda4, #e3f2ff) !important;
+    background: linear-gradient(to right, #fff6c8, #e6f3ff) !important;
     border-bottom: 3px solid #ffe38a;
 }
 
@@ -45,7 +50,7 @@ body {
     }
 
         .navbar a:hover {
-            background-color: #f5eda4 !important;
+            background-color: #fff2b8 !important;
             border-radius: 14px;
         }
 
@@ -85,7 +90,7 @@ div.left {
     border-radius: 12px !important;
 }
 
-    /* Prevent images from breaking */
+    /* Protect images inside cells */
     td img,
     th img {
         background: none !important;
@@ -106,7 +111,7 @@ a {
 input[type="submit"],
 button,
 .btn {
-    background-color: #f5eda4 !important;
+    background-color: #fff2b8 !important;
     color: #8a6a00 !important;
     border: none !important;
     border-radius: 22px;
@@ -132,7 +137,7 @@ select {
 
 /* ================= ALERTS ================= */
 .alert {
-    background-color: #f5eda4 !important;
+    background-color: #fff9dd !important;
     color: #7a6300;
     border-radius: 18px;
     border: none;
@@ -156,7 +161,7 @@ select {
 }
 
     .chatMessageContainer:nth-child(even) {
-        background-color: #f5eda4 !important;
+        background-color: #fff9dd !important;
     }
 
 /* ================= FOOTER ================= */
@@ -166,10 +171,26 @@ select {
     border-radius: 18px;
 }
 
-/* ================= CAVES & MOUNDS ================= */
+/* ================= CAVES ================= */
+.cave-grid img,
+.cave-grid-header img {
+    content: url("https://i.postimg.cc/WpXnw1rp/blue_and_yellow_pastel_color_background_free_photo.jpg");
+    width: 100%;
+    border-radius: 18px;
+}
+
+/* ================= MOUNDS ================= */
+.mound-grid img,
+.mound-grid-header img {
+    content: url("https://i.postimg.cc/WpXnw1rp/blue_and_yellow_pastel_color_background_free_photo.jpga");
+    width: 100%;
+    border-radius: 18px;
+}
+
+/* ================= CAVE / MOUND CARDS ================= */
 .cave-grid,
 .mound-grid {
-    background-color: #f4faff !important;
+    background-color: rgba(244, 250, 255, 0.9) !important;
     border-radius: 18px;
     padding: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -178,7 +199,7 @@ select {
     .cave-grid:hover,
     .mound-grid:hover {
         transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(140,180,255,0.35);
+        box-shadow: 0 8px 20px rgba(140, 180, 255, 0.35);
     }
 
 /* ================= SCROLLBAR ================= */
