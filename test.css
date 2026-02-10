@@ -1,114 +1,90 @@
-/* === SOFT GREEN LIODEN THEME === */
+/* === DARK GREEN SOFT MODE | LIODEN === */
 
-/* Page background */
+/* Overall background */
 body {
-	background: #eef5ee url("https://www.lioden.com/images/dust.png") repeat;
-	color: #3f5a3f;
+	background: #0f1a13;
+	color: #cfe6cf;
 	font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
-/* Main container */
+/* Main page container */
 .container {
-	background: #f8fbf8;
-	border-radius: 20px;
+	background: #14221a;
+	border-radius: 22px;
 	padding: 15px;
-	box-shadow: 0 0 15px rgba(120,160,120,0.25);
+	box-shadow: 0 0 25px rgba(0,0,0,0.6);
 }
 
 /* Topbar */
 .topbar {
-	background: linear-gradient(to right, #cfe6cf, #e7f3e7);
-	border-radius: 15px;
+	background: linear-gradient(to right, #1e3326, #263f30);
+	border-radius: 18px;
 }
 
 /* Navigation bar */
 .navbar {
-	background: #dbeedb;
-	border-radius: 15px;
+	background: #1a2e22;
+	border-radius: 18px;
 }
 
 	.navbar li a {
-		color: #4b6b4b !important;
+		color: #bfe3bf !important;
 		font-weight: 600;
 		transition: 0.3s;
 	}
 
 		.navbar li a:hover {
-			background: #c3dec3 !important;
-			border-radius: 12px;
-			color: #2f4f2f !important;
+			background: #2f4f3a !important;
+			border-radius: 14px;
+			color: #e6ffe6 !important;
 		}
 
-/* Sidebars */
+/* Side panels */
 .col-md-3 {
-	background: #f0f7f0;
-	border-radius: 18px;
+	background: #182b20;
+	border-radius: 20px;
 	padding: 12px;
 }
 
-/* Main content area */
+/* Main content */
 .col-md-9 {
-	background: #f9fdf9;
-	border-radius: 18px;
+	background: #15271d;
+	border-radius: 20px;
 	padding: 15px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+	color: #a7dca7;
+	text-align: center;
 }
 
 /* Tables */
 .table {
-	background: #f3faf3;
-	border-radius: 15px;
+	background: #1a3024;
+	border-radius: 18px;
 	overflow: hidden;
 }
 
 	.table th {
-		background: #cfe6cf;
-		color: #355735;
+		background: #254235;
+		color: #c9f0c9;
 	}
 
 	.table td {
-		background: #eef6ee;
+		background: #1b3326;
+		color: #cfe6cf;
 	}
 
-/* Headers */
-h1, h2, h3, h4 {
-	color: #3b633b;
-	text-align: center;
-}
+	/* Alternating rows */
+	.table tr:nth-child(even) td {
+		background: #162c21;
+	}
 
 /* Links */
 a {
-	color: #5a8f5a;
+	color: #8fd18f;
 }
 
 	a:hover {
-		color: #3f6f3f;
-		text-decoration: none;
-	}
-
-/* Buttons */
-input[type="submit"], button {
-	background: #b7dcb7;
-	color: #2f4f2f;
-	border: none;
-	border-radius: 20px;
-	padding: 6px 12px;
-	transition: 0.3s;
-}
-
-	input[type="submit"]:hover, button:hover {
-		background: #9fcb9f;
-	}
-
-/* Scrollbar (Chrome/Edge) */
-::-webkit-scrollbar {
-	width: 10px;
-}
-
-::-webkit-scrollbar-track {
-	background: #edf6ed;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #b7dcb7;
-	border-radius: 10px;
-}
+		color: #caf
