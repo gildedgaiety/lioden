@@ -1,0 +1,259 @@
+﻿/* === PASTEL BLUE & YELLOW | FULL LIODEN CSS === */
+
+/* BODY */
+body {
+    background: #f5faff;
+    color: #4a5a6a;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* MAIN CONTAINER */
+.container {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 16px;
+    box-shadow: 0 0 25px rgba(180,200,230,0.35);
+}
+
+/* TOP BAR */
+#top {
+    background: linear-gradient(to right, #dff1ff, #fff6cc);
+    border-bottom: 3px solid #ffe38a;
+}
+
+    #top a {
+        color: #5a7fa6 !important;
+        font-weight: 600;
+    }
+
+        #top a:hover {
+            color: #f0b400 !important;
+        }
+
+    /* LOGO */
+    #top img {
+        filter: brightness(1.05) saturate(1.1);
+    }
+
+/* NAV BAR */
+.navbar {
+    background: #eef7ff;
+    border-radius: 18px;
+}
+
+    .navbar li a {
+        color: #5a82aa !important;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+        .navbar li a:hover {
+            background: #fff2b8 !important;
+            border-radius: 14px;
+            color: #b89000 !important;
+        }
+
+/* LEFT SIDEBAR */
+.col-md-3 {
+    background: #f4faff;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+/* MAIN CONTENT */
+.col-md-9 {
+    background: #fcfeff;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/* HEADERS */
+h1, h2, h3, h4 {
+    color: #6c95c4;
+    text-align: center;
+}
+
+/* TABLES */
+.table {
+    background: #f6fbff;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+    .table th {
+        background: #dff1ff;
+        color: #4f6f8f;
+    }
+
+    .table td {
+        background: #ffffff;
+    }
+
+    .table tr:nth-child(even) td {
+        background: #f1f8ff;
+    }
+
+/* LINKS */
+a {
+    color: #6fa3d9;
+}
+
+    a:hover {
+        color: #f0b400;
+        text-decoration: none;
+    }
+
+/* BUTTONS (ALL OF THEM) */
+input[type="submit"],
+button,
+.btn,
+.btn-default,
+.btn-primary {
+    background: #fff2b8;
+    color: #8a6a00;
+    border: none;
+    border-radius: 22px;
+    padding: 6px 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+    input[type="submit"]:hover,
+    button:hover,
+    .btn:hover {
+        background: #ffe38a;
+    }
+
+/* FORMS & INPUTS */
+input,
+textarea,
+select {
+    background: #ffffff;
+    color: #4a5a6a;
+    border: 2px solid #d6ecff;
+    border-radius: 16px;
+}
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: none;
+        box-shadow: 0 0 8px rgba(180,210,255,0.6);
+    }
+
+/* ALERTS */
+.alert,
+.alert-warning,
+.alert-success,
+.alert-danger {
+    background: #fff9dd;
+    color: #7a6300;
+    border: none;
+    border-radius: 18px;
+}
+
+/* PROGRESS BARS */
+.progress {
+    background: #eaf4ff;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    background: linear-gradient(to right, #8fc4ff, #ffe38a);
+    border-radius: 20px;
+}
+
+/* CHAT */
+.chatMessageContainer {
+    background: #f4faff !important;
+    border-radius: 14px;
+}
+
+    .chatMessageContainer:nth-child(even) {
+        background: #fff9dd !important;
+    }
+
+/* FOOTER */
+.footer {
+    background: #eef7ff;
+    color: #6c95c4;
+    border-radius: 18px;
+}
+
+/* CAVES */
+.cave-grid,
+.cave-grid-header {
+    background: #f4faff;
+    border-radius: 18px;
+    padding: 10px;
+}
+
+/* MOUNDS */
+.mound-grid,
+.mound-grid-header {
+    background: #fff9dd;
+    border-radius: 18px;
+    padding: 10px;
+}
+
+/* DROPDOWNS */
+.dropdown-menu {
+    background: #f6fbff;
+    border-radius: 16px;
+    border: none;
+}
+
+    .dropdown-menu li a:hover {
+        background: #fff2b8;
+    }
+
+/* PAGINATION */
+.pagination li a {
+    background: #f4faff;
+    border-radius: 14px;
+    color: #6fa3d9;
+}
+
+    .pagination li a:hover {
+        background: #fff2b8;
+    }
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f8ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffe38a;
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #f0c400;
+    }
+/* === SOFT HOVER ANIMATION === */
+
+.cave-grid,
+.mound-grid {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+    .cave-grid:hover,
+    .mound-grid:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(140,180,255,0.35), 0 0 12px rgba(255,230,140,0.4);
+    }
+    .cave-grid img,
+    .mound-grid img {
+        opacity: 0.95;
+        transition: opacity 0.3s ease;
+    }
+
+        .cave-grid img:hover,
+        .mound-grid img:hover {
+            opacity: 1;
+        }
