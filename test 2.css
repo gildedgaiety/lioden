@@ -88,3 +88,55 @@ a {
 
 	a:hover {
 		color: #caf
+/* === CAVES & MOUNDS === */
+		/* All cave headers */
+		.cave-grid img, .cave-grid-header img, .cave-grid h3 img
+
+{
+	content: url("YOUR_CAVE_IMAGE_URL_HERE");
+	max-width: 100%;
+	border-radius: 16px;
+}
+
+/* All mounds */
+.mound-grid img,
+.mound-grid-header img {
+	content: url("YOUR_MOUND_IMAGE_URL_HERE");
+	max-width: 100%;
+	border-radius: 16px;
+}
+/* === TOP AREA === */
+
+/* Full top container */
+#top {
+	background: linear-gradient(to bottom, #050a07, #0b1410);
+	border-bottom: 2px solid #1f4f38;
+	box-shadow: 0 8px 20px rgba(0,0,0,0.9);
+}
+
+	/* Lioden logo */
+	#top img {
+		filter: brightness(0.7) saturate(1.2);
+	}
+
+	/* Currency / stats text */
+	#top .pull-right,
+	#top .pull-left {
+		color: #caffdd !important;
+		font-weight: 600;
+	}
+
+	/* Links in top */
+	#top a {
+		color: #7fcf9b !important;
+	}
+
+		#top a:hover {
+			color: #caffdd !important;
+			text-decoration: none;
+		}
+#top {
+	background: #050a07 url("YOUR_TOP_BANNER_URL_HERE") center/cover no-repeat;
+	min-height: 130px;
+	border-bottom: 2px solid #1f4f38;
+}
