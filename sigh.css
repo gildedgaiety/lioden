@@ -1,152 +1,258 @@
-/* =========================
-   LIODEN FULL DARK PASTEL THEME (REFINED WITH PULSING GLOW)
-   ========================= */
+/*
+    Layout Made by Chris (#105465) for free use
+All of my free use layouts are subject to the rules detailed on my free CSS and HTML thread, so please keep that in mind and abide by my rules. I have chosen to make this work freely available and I can change that at any time
+https://www.lioden.com/topic.php?id=304429491963
+*/
 
-/* Base body */
-body {
-    background: url('https://your-background-image-link-here.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #F9F7F2; /* soft off-white for text */
-    font-family: Arial, sans-serif;
-    cursor: url('https://cur.cursors-4u.net/cursors/cur-1/cur6.cur'), auto; /* softer cursor */
+/* =========================
+   FONT IMPORT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+    --fc1: #ffffff;
+    --fc2: #dce0ef;
+    --fc3: #b9c0df;
+    --eventText: #d96e26;
+    --mainFont: 'Libre Franklin', Verdana, 'Geneva', Tahoma, sans-serif;
+    --headFont: 'Source Serif 4', 'Times New Roman', Times, serif;
+    --bgColor: #080a12b3;
+    --tc: #834216;
+    --borderColor: #000000;
+    --radius-soft: 14px;
+    --radius-small: 8px;
+    --transition-soft: 0.25s ease-in-out;
 }
 
-/* Container transparency */
-#pageContainer,
-.col-md-9,
-.col-md-9.col-xs-12,
-.panel,
-.panel-body {
-    background: rgba(0,0,0,0) !important;
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: var(--mainFont);
+    background: #080a12 url('../../img/seasons/harvest-moon.jpg') fixed center 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--fc1);
+    text-shadow: 0 0 6px rgba(246, 231, 166, 0.35);
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-4/cur358.cur'), auto;
+}
+
+/* =========================
+   HEADERS
+========================= */
+h1, h2, h3, h4, .sidebar h3 {
+    color: var(--fc1);
+    font-family: var(--headFont);
+    text-shadow: 0 0 10px rgba(246, 231, 166, 0.35);
+}
+
+/* =========================
+   TEXT
+========================= */
+p, b, #fraProfileContent, span, li, td {
+    color: #e2e6f0;
+    text-shadow: 0 0 6px rgba(246, 231, 166, 0.25);
+}
+
+small {
+    color: var(--fc1) !important;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    color: var(--fc2);
+    text-decoration: none;
+    transition: var(--transition-soft);
+    text-shadow: 0 0 6px rgba(169, 199, 255, 0.35);
+}
+
+a:hover {
+    color: var(--fc1);
+    text-shadow: 0 0 10px rgba(246, 231, 166, 0.35);
+}
+
+/* =========================
+   NAVBAR & TOPBAR
+========================= */
+.topbar, .navbar {
+    border-radius: var(--radius-soft);
+    box-shadow: 0 0 14px rgba(169,199,255,0.25);
+}
+
+.topbar {
+    background: #080a12;
+    border: 1px solid var(--borderColor);
+    border-top: none;
+}
+
+.navbar {
+    background: #101423;
+    font-family: var(--headFont);
+    border-bottom: 1px solid var(--borderColor);
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: var(--fc2);
+    font-weight: bold;
+}
+
+/* =========================
+   MAIN CONTENT BOX
+========================= */
+.main {
+    background: transparent !important;
+    border-radius: 0;
+    border: 1px solid var(--borderColor);
+    box-shadow: none;
+}
+
+/* territory box */
+.col-md-9 {
+    background: transparent !important;
     box-shadow: none !important;
+    min-height: auto !important;
     padding-top: 25px;
 }
 
-/* Remove background but add pulsing glow */
-@keyframes pulseGlow {
-    0% {
-        box-shadow: 0 0 10px rgba(169,199,255,0.25), 0 0 15px rgba(250,250,200,0.15);
-    }
-
-    50% {
-        box-shadow: 0 0 14px rgba(169,199,255,0.35), 0 0 20px rgba(250,250,200,0.25);
-    }
-
-    100% {
-        box-shadow: 0 0 10px rgba(169,199,255,0.25), 0 0 15px rgba(250,250,200,0.15);
-    }
-}
-
-.cave-grid,
-.mound-grid,
-.feature {
-    background: transparent !important;
-    border-radius: 14px;
-    border: 1px solid rgba(250,250,200,0.15); /* subtle pastel yellow border */
-    animation: pulseGlow 3s ease-in-out infinite;
-    transition: all 0.3s ease;
-}
-
-/* Keep .left background intact */
-
-/* Table transparency and soft glow */
-.table {
-    background: rgba(25, 30, 40, 0.85) !important; /* soft glass */
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(169,199,255,0.25);
-}
-
-    .table td,
-    .table th {
-        background: transparent !important;
-        transition: none !important; /* remove hover effect */
-    }
-
-        /* Remove hover effect for td entirely */
-        .table td:hover,
-        .table th:hover {
-            background: transparent !important;
-        }
-
-/* Alerts */
-.alert {
-    background: rgba(25,30,40,0.85) !important;
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(169,199,255,0.25);
-    color: #FFFDD0;
-}
-
-/* Buttons and inputs */
-input[type="submit"],
-button,
-select {
-    background: rgba(250, 250, 200, 0.15); /* soft pastel yellow */
-    color: #F9F7F2;
-    border: 1px solid rgba(169,199,255,0.4); /* pastel blue border */
-    border-radius: 12px;
-    padding: 6px 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 8px rgba(169,199,255,0.25);
-}
-
-    input[type="submit"]:hover,
-    button:hover,
-    select:hover {
-        background: rgba(250, 250, 200, 0.25);
-        box-shadow: 0 0 12px rgba(169,199,255,0.35);
-    }
-
-/* Hunger and EXP bars */
-.progress-bar {
-    background: rgba(250, 250, 200, 0.15);
-    border: 1px solid rgba(169,199,255,0.4);
-    border-radius: 12px;
-    box-shadow: 0 0 8px rgba(169,199,255,0.25) inset;
-}
-
-/* Boxes, comments, and profile blocks */
-.comment,
-.comment:nth-child(even),
-#commentBox,
-#fraProfileContent,
-.Box2 {
-    background: transparent !important;
-    box-shadow: 0 0 12px rgba(169,199,255,0.25);
-    border-radius: 10px;
-}
-
-/* Soft text glow */
-h1, h2, h3, h4, h5, h6, .b, .xlarge, .h3, .member-online, a {
-    text-shadow: 0 0 4px rgba(169,199,255,0.35);
-}
-
-/* Breadcrumbs */
-ol.breadcrumb li a,
-ol.breadcrumb li.active {
-    color: #FFFDD0 !important;
-}
-
-/* Links */
-a {
-    color: #FFFDD0;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-    a:hover {
-        color: #F0E68C;
-        text-shadow: 0 0 8px rgba(169,199,255,0.35);
-    }
-
-/* Pseudo-elements cleanup */
+/* pseudo elements */
 .col-md-9::before,
 .col-md-9::after {
     background: transparent !important;
     content: none !important;
 }
 
-/* Misc spacing */
-.boxcontainer, .row {
+/* =========================
+   SIDEBARS
+========================= */
+.sidebar.col-md-3 {
     background: transparent !important;
+}
+
+.col-md-3 .panel {
+    border: 1px solid var(--borderColor);
+    background: #101423;
+    box-shadow: 0 0 14px rgba(169,199,255,0.25);
+    color: var(--fc1);
+}
+
+/* =========================
+   TABLES
+========================= */
+.table, .table-striped, .table-bordered {
+    background: #202746;
+    border-radius: var(--radius-soft);
+    overflow: hidden;
+    box-shadow: 0 0 16px rgba(169,199,255,0.25);
+}
+
+.table th {
+    background: rgba(246,231,166,0.08);
+    color: var(--fc1);
+    font-family: var(--headFont);
+}
+
+.table td {
+    background: rgba(25,30,40,0.85);
+}
+
+/* remove td hover */
+.table tr:hover td,
+.table td:hover {
+    background: rgba(25,30,40,0.85) !important;
+    box-shadow: none !important;
+}
+
+/* left column styling */
+.table .left {
+    background: rgba(246,231,166,0.08);
+}
+
+/* =========================
+   CAVES & MOUNDS
+========================= */
+.cave-grid, .mound-grid, .feature {
+    background: transparent !important;
+    border: 1px solid rgba(169,199,255,0.4);
+    box-shadow: 0 0 8px rgba(169,199,255,0.25);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn, button, input[type="submit"], input[type="button"] {
+    background: linear-gradient(135deg, rgba(169,199,255,0.25), rgba(246,231,166,0.25));
+    color: #ffffff;
+    border: 1px solid rgba(169,199,255,0.5);
+    border-radius: var(--radius-small);
+    padding: 6px 12px;
+    box-shadow: 0 0 10px rgba(169,199,255,0.35);
+    transition: var(--transition-soft);
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background: linear-gradient(135deg, rgba(246,231,166,0.45), rgba(169,199,255,0.45));
+    box-shadow: 0 0 18px rgba(246,231,166,0.6);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   PROGRESS BARS
+========================= */
+.progress {
+    background: rgba(20,25,35,0.7);
+    border-radius: 12px;
+    padding: 3px;
+    box-shadow: 0 0 10px rgba(169,199,255,0.35);
+}
+
+.progress-bar {
+    background: linear-gradient(135deg, rgba(169,199,255,0.55), rgba(246,231,166,0.55));
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(169,199,255,0.45), inset 0 0 6px rgba(246,231,166,0.35);
+    text-shadow: 0 0 6px rgba(246,231,166,0.45);
+    transition: var(--transition-soft);
+}
+
+.progress:hover {
+    box-shadow: 0 0 18px rgba(246,231,166,0.6);
+    transform: translateY(-1px);
+}
+
+.progress:hover .progress-bar {
+    background: linear-gradient(135deg, rgba(246,231,166,0.7), rgba(169,199,255,0.7));
+}
+
+/* =========================
+   IMAGES
+========================= */
+img {
+    border-radius: var(--radius-small);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: var(--bgColor);
+    border-radius: var(--radius-soft);
+    box-shadow: 0 0 14px rgba(169,199,255,0.25);
+    color: #cfd6ff;
+}
+
+/* =========================
+   OPTIONAL: CUSTOM DYNASTY / LEFT BOXES
+========================= */
+div.left {
+    background: rgba(246,231,166,0.08);
+    border: 1px solid rgba(169,199,255,0.4);
+    box-shadow: 0 0 8px rgba(169,199,255,0.25);
+    color: var(--fc1);
 }
