@@ -255,11 +255,13 @@ img {
     border: 1px solid rgba(169,199,255,0.4); /* keep border/glow */
     box-shadow: 0 0 8px rgba(169,199,255,0.25); /* keep glow effect */
 }
-/* Lioden main logo pastel dark theme */
-#logo img {
-    filter: hue-rotate(200deg) saturate(1.2) brightness(1.05);
+/* Lioden main logo pastel dark mode */
+img[alt="Lioden"] {
+    filter: sepia(0.2) hue-rotate(200deg) saturate(1.2) brightness(1.05);
     transition: all 0.3s ease;
 }
+
+
 
 
 
