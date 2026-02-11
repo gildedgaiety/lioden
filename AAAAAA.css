@@ -81,8 +81,7 @@ a {
 
 .table,
 .table-striped,
-.table-bordered,
-.left {
+.table-bordered {
     background: var(--bg-glass);
     border-radius: var(--radius-soft);
     overflow: hidden;
@@ -256,5 +255,6 @@ img {
     border: 1px solid rgba(169,199,255,0.4); /* keep border/glow */
     box-shadow: 0 0 8px rgba(169,199,255,0.25); /* keep glow effect */
 }
+
 
 
