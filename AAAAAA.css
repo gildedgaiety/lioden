@@ -243,27 +243,6 @@ img {
     background: transparent !important;
     content: none !important;
 }
-/* Navigation / small .left boxes */
-.left a {
-    display: block;
-    background: rgba(25, 30, 40, 0.85);
-    border-radius: 10px;
-    border: 1px solid rgba(169,199,255,0.4);
-    box-shadow: 0 0 12px rgba(169,199,255,0.25);
-    color: #F9F7F2;
-    font-weight: bold;
-    padding: 8px 12px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.left a:hover {
-    background: rgba(25, 30, 40, 0.9);
-    box-shadow: 0 0 14px rgba(169,199,255,0.35);
-    cursor: pointer;
-}
-
 
 /* =========================
    OPTIONAL: REMOVE CAVE & MOUND BACKGROUNDS
@@ -276,6 +255,7 @@ img {
     border: 1px solid rgba(169,199,255,0.4); /* keep border/glow */
     box-shadow: 0 0 8px rgba(169,199,255,0.25); /* keep glow effect */
 }
+
 
 
 
