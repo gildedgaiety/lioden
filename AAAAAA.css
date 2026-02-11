@@ -243,47 +243,31 @@ img {
     background: transparent !important;
     content: none !important;
 }
-/* =========================
-   Dynasty & Navigation Boxes Override
-   ========================= */
-
-/* Dynasty boxes */
-.dynastylist .left,
-.dynastylist .left a,
-.dynastylist .left a div {
-    background: rgba(25, 30, 40, 0.85) !important; /* dark semi-transparent */
-    border-radius: 10px !important;
-    border: 1px solid rgba(169,199,255,0.4) !important;
-    box-shadow: 0 0 12px rgba(169,199,255,0.25) !important;
-    color: #F9F7F2 !important;
-    font-weight: bold !important;
-    text-align: center !important;
-    padding: 12px !important;
+/* Hide images inside dynasty/nav boxes so background shows */
+.dynastylist .left img,
+.row > .col > a > .left img {
+    display: none !important;
 }
 
-/* Navigation boxes */
-.row > .col > a > .left,
-.row > .col > a > .left div {
+/* Apply styled background to the box itself */
+.dynastylist .left,
+.row > .col > a > .left {
     background: rgba(25, 30, 40, 0.85) !important;
     border-radius: 10px !important;
     border: 1px solid rgba(169,199,255,0.4) !important;
     box-shadow: 0 0 12px rgba(169,199,255,0.25) !important;
     color: #F9F7F2 !important;
-    font-weight: bold !important;
-    text-align: center !important;
-    padding: 12px !important;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
 }
 
-/* Hover effect */
 .dynastylist .left:hover,
-.row > .col > a > .left:hover,
-.dynastylist .left a:hover,
-.row > .col > a > .left div:hover {
+.row > .col > a > .left:hover {
     background: rgba(25, 30, 40, 0.9) !important;
     box-shadow: 0 0 14px rgba(169,199,255,0.35) !important;
-    cursor: pointer !important;
+    cursor: pointer;
 }
-
 
 /* =========================
    OPTIONAL: REMOVE CAVE & MOUND BACKGROUNDS
@@ -296,6 +280,7 @@ img {
     border: 1px solid rgba(169,199,255,0.4); /* keep border/glow */
     box-shadow: 0 0 8px rgba(169,199,255,0.25); /* keep glow effect */
 }
+
 
 
 
