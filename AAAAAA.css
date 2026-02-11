@@ -14,12 +14,20 @@
 }
 
 /* =========================
+   FONT
+   ========================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
    BODY & PAGE CONTAINERS
    ========================= */
 
 body {
-    background-color: transparent !important;
-    background-attachment: fixed;
+    background: url('https://i.postimg.cc/MGGMxVd6/aesthetic-night-sky-1tv49f874bc92o72.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #e6e6e6;
     text-shadow: 0 0 6px var(--text-glow);
 }
@@ -33,6 +41,21 @@ body {
     background: transparent !important;
     box-shadow: none !important;
     border: none !important;
+}
+
+/* =========================
+   LEFT SIDEBARS
+   ========================= */
+
+.left {
+    font-family: 'Poppins', sans-serif; /* match soft font */
+    color: #e2e6f0;
+    background: rgba(25, 30, 40, 0.85); /* slightly transparent dark */
+    border-radius: var(--radius-soft);
+    border: 1px solid rgba(169,199,255,0.4);
+    box-shadow: 0 0 12px rgba(169,199,255,0.25);
+    padding: 10px;
+    text-shadow: 0 0 6px var(--text-glow);
 }
 
 /* =========================
@@ -103,6 +126,7 @@ a {
             background: rgba(25, 30, 40, 0.85) !important;
             box-shadow: none !important;
         }
+
 /* =========================
    SIDEBARS / WELLS / ALERTS
    ========================= */
@@ -227,6 +251,7 @@ img {
     box-shadow: 0 0 14px var(--border-glow);
     color: #cfd6ff;
 }
+
 /* Make main content fully transparent */
 #pageContainer,
 .col-md-9,
@@ -255,24 +280,3 @@ img {
     border: 1px solid rgba(169,199,255,0.4); /* keep border/glow */
     box-shadow: 0 0 8px rgba(169,199,255,0.25); /* keep glow effect */
 }
-/* Lioden main logo pastel dark mode */
-img[alt="Lioden"] {
-    filter: sepia(0.2) hue-rotate(200deg) saturate(1.2) brightness(1.05);
-    transition: all 0.3s ease;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
