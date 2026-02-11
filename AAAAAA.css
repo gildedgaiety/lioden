@@ -90,7 +90,9 @@ a {
 /* =========================
    NAVBAR & BREADCRUMBS
    ========================= */
-
+.navbar-header > a > img {
+content: url('https://i.postimg.cc/SKz4WKKz/Untitled-design.png');
+}
 .navbar,
 .breadcrumb {
     background: var(--bg-glass);
@@ -280,3 +282,4 @@ img {
     border: 1px solid rgba(169,199,255,0.4); /* keep border/glow */
     box-shadow: 0 0 8px rgba(169,199,255,0.25); /* keep glow effect */
 }
+
