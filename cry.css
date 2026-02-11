@@ -1,0 +1,144 @@
+/* =========================
+   LIODEN FULL DARK PASTEL THEME (CORRECTED)
+   ========================= */
+
+/* Base body */
+body {
+    background: url('https://your-background-image-link-here.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #F9F7F2; /* soft off-white for text */
+    font-family: Arial, sans-serif;
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-1/cur6.cur'), auto;
+}
+
+/* Container transparency */
+#pageContainer,
+.col-md-9,
+.col-md-9.col-xs-12,
+.panel,
+.panel-body {
+    background: rgba(0,0,0,0) !important;
+    box-shadow: none !important;
+    padding-top: 25px;
+}
+
+/* Glow animation */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(169,199,255,0.25), 0 0 15px rgba(250,250,200,0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 14px rgba(169,199,255,0.35), 0 0 20px rgba(250,250,200,0.25);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(169,199,255,0.25), 0 0 15px rgba(250,250,200,0.15);
+    }
+}
+
+/* Cave, Mound, and Feature blocks - pastel fill + glow */
+.cave-grid,
+.mound-grid,
+.feature {
+    background: rgba(250, 250, 200, 0.15); /* pastel yellow base */
+    border-radius: 14px;
+    border: 1px solid rgba(169,199,255,0.4); /* pastel blue border */
+    animation: pulseGlow 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+/* Table transparency with soft glow */
+.table {
+    background: rgba(25, 30, 40, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(169,199,255,0.25);
+}
+
+    .table td,
+    .table th {
+        background: transparent !important;
+        transition: none !important; /* remove hover effect */
+    }
+
+        /* Remove hover from td entirely */
+        .table td:hover,
+        .table th:hover {
+            background: transparent !important;
+        }
+
+/* Alerts */
+.alert {
+    background: rgba(25,30,40,0.85);
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(169,199,255,0.25);
+    color: #FFFDD0;
+}
+
+/* Buttons and inputs */
+input[type="submit"],
+button,
+select {
+    background: rgba(250, 250, 200, 0.15);
+    color: #F9F7F2;
+    border: 1px solid rgba(169,199,255,0.4);
+    border-radius: 12px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(169,199,255,0.25);
+}
+
+    input[type="submit"]:hover,
+    button:hover,
+    select:hover {
+        background: rgba(250, 250, 200, 0.25);
+        box-shadow: 0 0 12px rgba(169,199,255,0.35);
+    }
+
+/* Hunger and EXP bars */
+.progress-bar {
+    background: rgba(250, 250, 200, 0.15);
+    border: 1px solid rgba(169,199,255,0.4);
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(169,199,255,0.25) inset;
+}
+
+/* Boxes, comments, profile blocks */
+.comment,
+.comment:nth-child(even),
+#commentBox,
+#fraProfileContent,
+.Box2 {
+    background: rgba(25,30,40,0.7);
+    box-shadow: 0 0 12px rgba(169,199,255,0.25);
+    border-radius: 10px;
+}
+
+/* Soft text glow */
+h1, h2, h3, h4, h5, h6, .b, .xlarge, .h3, .member-online, a {
+    text-shadow: 0 0 4px rgba(169,199,255,0.35);
+}
+
+/* Breadcrumbs */
+ol.breadcrumb li a,
+ol.breadcrumb li.active {
+    color: #FFFDD0 !important;
+}
+
+/* Links */
+a {
+    color: #FFFDD0;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+    a:hover {
+        color: #F0E68C;
+        text-shadow: 0 0 8px rgba(169,199,255,0.35);
+    }
+
+/* Misc spacing */
+.boxcontainer, .row {
+    background: transparent !important;
+}
