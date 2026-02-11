@@ -260,17 +260,18 @@ img {
 #pageContainer,
 .col-md-9,
 .col-md-9.col-xs-12 {
-    background: rgba(0,0,0,0) !important; /* fully transparent */
-    box-shadow: none !important; /* remove any shadows if applied */
-    min-height: auto !important; /* optional: remove fixed height */
-    padding-top: 25px; /* keep spacing */
-}
+   background: var(--bg-glass);
+    border-radius: var(--radius-soft);
+    border: 1px solid rgba(169, 199, 255, 0.25);
+    box-shadow: 0 0 14px var(--border-glow);
 
     /* If pseudo-elements exist */
     .col-md-9::before,
     .col-md-9::after {
-        background: transparent !important;
-        content: none !important;
+    background: var(--bg-glass);
+    border-radius: var(--radius-soft);
+    border: 1px solid rgba(169, 199, 255, 0.25);
+    box-shadow: 0 0 14px var(--border-glow);
     }
 
 /* =========================
@@ -327,4 +328,5 @@ img {
         box-shadow: 0 0 14px rgba(169,199,255,0.35);
         cursor: pointer;
     }
+
 
