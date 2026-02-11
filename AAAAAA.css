@@ -255,6 +255,75 @@ img {
     border: 1px solid rgba(169,199,255,0.4); /* keep border/glow */
     box-shadow: 0 0 8px rgba(169,199,255,0.25); /* keep glow effect */
 }
+/* =========================
+   Dynasty Boxes
+   ========================= */
+.dynastycollection .dynastylist,
+.dynastycollection .dynastylist a,
+.dynastycollection .dynastylist .left {
+    background: rgba(25, 30, 40, 0.85) !important; /* dark pastel base */
+    border-radius: 10px !important;
+    border: 1px solid rgba(169,199,255,0.4) !important;
+    box-shadow: 0 0 12px rgba(169,199,255,0.25) !important;
+    color: #F9F7F2 !important;
+    padding: 8px !important;
+    text-align: center !important;
+    display: block !important;
+    text-decoration: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+.dynastycollection .dynastylist:hover,
+.dynastycollection .dynastylist a:hover,
+.dynastycollection .dynastylist .left:hover {
+    background: rgba(25, 30, 40, 0.9) !important;
+    box-shadow: 0 0 14px rgba(169,199,255,0.35) !important;
+    cursor: pointer !important;
+}
+
+/* Add overlay behind images so background shows */
+.dynastycollection .dynastylist .left::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(25, 30, 40, 0.6);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.dynastycollection .dynastylist .left h3,
+.dynastycollection .dynastylist .left img {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   Navigation / Settings Buttons
+   ========================= */
+.row > .col > a,
+.left a {
+    background: rgba(25, 30, 40, 0.85) !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(169,199,255,0.4) !important;
+    box-shadow: 0 0 12px rgba(169,199,255,0.25) !important;
+    color: #F9F7F2 !important;
+    font-weight: bold !important;
+    padding: 8px 12px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: block !important;
+    transition: all 0.3s ease !important;
+}
+
+.row > .col > a:hover,
+.left a:hover {
+    background: rgba(25, 30, 40, 0.9) !important;
+    box-shadow: 0 0 14px rgba(169,199,255,0.35) !important;
+    cursor: pointer !important;
+}
+
 
 
 
