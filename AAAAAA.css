@@ -255,46 +255,13 @@ img {
     border: 1px solid rgba(169,199,255,0.4); /* keep border/glow */
     box-shadow: 0 0 8px rgba(169,199,255,0.25); /* keep glow effect */
 }
-/* =========================
-   Dynasty Boxes & Left Links
-   ========================= */
-.dynastycollection .dynastylist a,
-.left a {
-    position: relative; /* allows overlay to sit on top */
-    display: block;
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-    color: #F9F7F2;
-    font-weight: bold;
+/* Lioden main logo pastel dark theme */
+#logo img {
+    filter: hue-rotate(200deg) saturate(1.2) brightness(1.05);
     transition: all 0.3s ease;
 }
 
-/* Overlay that sets background */
-.dynastycollection .dynastylist a::before,
-.left a::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(25, 30, 40, 0.85);
-    border-radius: 10px;
-    z-index: 0;
-}
 
-/* Make text and images appear above overlay */
-.dynastycollection .dynastylist a * ,
-.left a * {
-    position: relative;
-    z-index: 1;
-}
-
-/* Hover effect */
-.dynastycollection .dynastylist a:hover::before,
-.left a:hover::before {
-    background: rgba(25, 30, 40, 0.9);
-    box-shadow: 0 0 14px rgba(169,199,255,0.35);
-    cursor: pointer;
-}
 
 
 
