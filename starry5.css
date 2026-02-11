@@ -1,0 +1,384 @@
+/* =========================
+   ROOT VARIABLES
+   ========================= */
+
+:root {
+    --pastel-yellow: #f6e7a6;
+    --pastel-blue: #a9c7ff;
+    --bg-glass: rgba(25, 30, 40, 0.85);
+    --border-glow: rgba(169, 199, 255, 0.45);
+    --text-glow: rgba(246, 231, 166, 0.35);
+    --radius-soft: 14px;
+    --radius-small: 8px;
+    --transition-soft: 0.25s ease-in-out;
+}
+
+/* =========================
+   FONT
+   ========================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   BODY & PAGE CONTAINERS
+   ========================= */
+
+body {
+    background: url('https://i.postimg.cc/MGGMxVd6/aesthetic-night-sky-1tv49f874bc92o72.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e6e6e6;
+    text-shadow: 0 0 6px var(--text-glow);
+}
+
+/* FULL TRANSPARENCY */
+#pagecontainer,
+.container,
+#main,
+.panel,
+.panel-body {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important; /* optional */
+}
+
+/* =========================
+   LEFT SIDEBARS
+   ========================= */
+
+.left {
+    font-family: 'Poppins', sans-serif; /* match soft font */
+    color: #e2e6f0;
+    background: rgba(25, 30, 40, 0.85); /* slightly transparent dark */
+    border-radius: var(--radius-soft);
+    border: 1px solid rgba(169,199,255,0.4);
+    box-shadow: 0 0 12px rgba(169,199,255,0.25);
+    padding: 10px;
+    text-shadow: 0 0 6px var(--text-glow);
+}
+
+/* =========================
+   TEXT & HEADERS
+   ========================= */
+
+h1, h2, h3, h4 {
+    color: var(--pastel-yellow);
+    text-shadow: 0 0 10px var(--text-glow);
+}
+
+p, span, li, td {
+    color: #e2e6f0;
+}
+
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+    color: var(--pastel-blue);
+    text-decoration: none;
+    transition: var(--transition-soft);
+    text-shadow: 0 0 6px rgba(169, 199, 255, 0.35);
+}
+
+    a:hover {
+        color: var(--pastel-yellow);
+        text-shadow: 0 0 10px var(--text-glow);
+    }
+
+/* =========================
+   NAVBAR & BREADCRUMBS
+   ========================= */
+.navbar-header > a > img {
+    content: url('https://i.postimg.cc/zvPQZgN3/Untitled-design-removebg-preview.png');
+}
+
+.navbar,
+.breadcrumb {
+    background: var(--bg-glass);
+    border-radius: var(--radius-soft);
+    box-shadow: 0 0 14px var(--border-glow);
+}
+
+/* =========================
+   TABLES (NO HOVER)
+   ========================= */
+
+.table,
+.table-striped,
+.table-bordered {
+    background: var(--bg-glass);
+    border-radius: var(--radius-soft);
+    overflow: hidden;
+    box-shadow: 0 0 16px var(--border-glow);
+}
+
+    .table th {
+        background: rgba(246, 231, 166, 0.08);
+        color: var(--pastel-yellow);
+    }
+
+    .table td {
+        background: rgba(25, 30, 40, 0.85);
+    }
+
+        /* Explicitly remove any td hover effects */
+        .table tr:hover td,
+        .table td:hover {
+            background: rgba(25, 30, 40, 0.85) !important;
+            box-shadow: none !important;
+        }
+
+/* =========================
+   SIDEBARS / WELLS / ALERTS
+   ========================= */
+
+.sidebar,
+.well,
+.alert {
+    background: var(--bg-glass);
+    border-radius: var(--radius-soft);
+    border: 1px solid rgba(169, 199, 255, 0.25);
+    box-shadow: 0 0 14px var(--border-glow);
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn,
+button,
+input[type="submit"],
+input[type="button"] {
+    background: linear-gradient( 135deg, rgba(169, 199, 255, 0.25), rgba(246, 231, 166, 0.25) );
+    color: #ffffff;
+    border: 1px solid rgba(169, 199, 255, 0.5);
+    border-radius: var(--radius-small);
+    padding: 6px 12px;
+    box-shadow: 0 0 10px rgba(169, 199, 255, 0.35);
+    transition: var(--transition-soft);
+}
+
+    .btn:hover,
+    button:hover,
+    input[type="submit"]:hover,
+    input[type="button"]:hover {
+        background: linear-gradient( 135deg, rgba(246, 231, 166, 0.45), rgba(169, 199, 255, 0.45) );
+        box-shadow: 0 0 18px rgba(246, 231, 166, 0.6);
+        transform: translateY(-1px);
+    }
+
+/* =========================
+   FORMS & INPUTS
+   ========================= */
+
+input,
+textarea,
+select {
+    background: rgba(20, 25, 35, 0.9);
+    color: #e6e6e6;
+    border-radius: var(--radius-small);
+    border: 1px solid rgba(169, 199, 255, 0.4);
+    box-shadow: inset 0 0 6px rgba(169, 199, 255, 0.2);
+}
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(246, 231, 166, 0.6);
+    }
+
+/* =========================
+   HUNGER & EXP BARS
+   ========================= */
+
+.progress {
+    background: rgba(20, 25, 35, 0.7);
+    border-radius: 12px;
+    padding: 3px;
+    box-shadow: 0 0 10px rgba(169, 199, 255, 0.35);
+    transition: var(--transition-soft);
+}
+
+.progress-bar {
+    background: linear-gradient( 135deg, rgba(169, 199, 255, 0.55), rgba(246, 231, 166, 0.55) );
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(169, 199, 255, 0.45), inset 0 0 6px rgba(246, 231, 166, 0.35);
+    text-shadow: 0 0 6px rgba(246, 231, 166, 0.45);
+    transition: var(--transition-soft);
+}
+
+.progress:hover {
+    box-shadow: 0 0 18px rgba(246, 231, 166, 0.6);
+    transform: translateY(-1px);
+}
+
+    .progress:hover .progress-bar {
+        background: linear-gradient( 135deg, rgba(246, 231, 166, 0.7), rgba(169, 199, 255, 0.7) );
+    }
+
+/* =========================
+   IMAGES
+   ========================= */
+
+img {
+    border-radius: var(--radius-small);
+}
+
+/* =========================
+   IMAGE REPLACERS
+   ========================= */
+a[href$="unsorted.php?id=248506"] > div.cave-grid > img {
+    content: url('https://i.postimg.cc/9XRT29cB/images-removebg-preview.png') !important;
+}
+
+/*This replaces the "unsorted lions" image! Just put your cave's unsorted lions url ID in replace of the 000 above, and your image url in the indicated slot. This is pretty much how the rest will be done as well!
+*/
+
+div.cave-grid > img {
+    content: url('https://i.postimg.cc/9XRT29cB/images-removebg-preview.png') !important;
+}
+
+/*This will replace the "pregnant lionesses" image! Same deal here, just no url ID needed.
+*/
+
+a[href$="lionoverview.php?id=248506"] > div.cave-grid > img {
+    content: url('https://i.postimg.cc/9XRT29cB/images-removebg-preview.png') !important;
+}
+
+/*This replaces the "pride overview" image! Same deal as the first, url ID and image url.*/
+
+a[href$="523297"] > div.cave-grid > img {
+    content: url('https://i.postimg.cc/9XRT29cB/images-removebg-preview.png') !important;
+}
+a[href$="192379"] > div.cave-grid > img {
+    content: url('https://i.postimg.cc/9XRT29cB/images-removebg-preview.png') !important;
+}
+
+/*This is for each individual cave (copy/paste and edit the url ID and wanted image for each)! Same basic principle, just formatted a touch differently.
+*/
+
+div.mound-grid > img {
+    content: url('https://i.postimg.cc/9XRT29cB/images-removebg-preview.png') !important;
+}
+
+a[href$="96799"] > div.mound-grid > img {
+    content: url('https://i.postimg.cc/9XRT29cB/images-removebg-preview.png') !important;
+}
+/* =========================
+   SCROLLBAR
+   ========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(20, 25, 35, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient( var(--pastel-blue), var(--pastel-yellow) );
+    border-radius: 10px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    background: var(--bg-glass);
+    border-radius: var(--radius-soft);
+    box-shadow: 0 0 14px var(--border-glow);
+    color: #cfd6ff;
+}
+
+/* Make main content fully transparent */
+#pageContainer,
+.col-md-9,
+.col-md-9.col-xs-12 {
+    background: var(--bg-glass);
+    border-radius: var(--radius-soft);
+    border: 1px solid rgba(169, 199, 255, 0.25);
+    box-shadow: 0 0 14px var(--border-glow);
+    /* If pseudo-elements exist */
+    .col-md-9::before,
+    .col-md-9::after {
+        background: var(--bg-glass);
+        border-radius: var(--radius-soft);
+        border: 1px solid rgba(169, 199, 255, 0.25);
+        box-shadow: 0 0 14px var(--border-glow);
+    }
+    /* =========================
+   OPTIONAL: REMOVE CAVE & MOUND BACKGROUNDS
+   ========================= */
+
+    .cave-grid,
+    .mound-grid,
+    .feature {
+        background: transparent !important;
+        border: 1px solid rgba(169,199,255,0.4); /* keep border/glow */
+        box-shadow: 0 0 8px rgba(169,199,255,0.25); /* keep glow effect */
+    }
+    /* =========================
+   Dynasty Boxes & Left Links
+   ========================= */
+    .dynastycollection .dynastylist a,
+    .left a {
+        position: relative; /* allows overlay to sit on top */
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+        text-decoration: none;
+        color: #F9F7F2;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+        /* Overlay that sets background */
+        .dynastycollection .dynastylist a::before,
+        .left a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(25, 30, 40, 0.85);
+            border-radius: 10px;
+            z-index: 0;
+        }
+        /* Make text and images appear above overlay */
+        .dynastycollection .dynastylist a *,
+        .left a * {
+            position: relative;
+            z-index: 1;
+        }
+        /* Hover effect */
+        .dynastycollection .dynastylist a:hover::before,
+        .left a:hover::before {
+            background: rgba(25, 30, 40, 0.9);
+            box-shadow: 0 0 14px rgba(169,199,255,0.35);
+            cursor: pointer;
+        }
+
+    .left,
+    .right,
+    td.left,
+    td.right,
+    div.left,
+    div.right {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+        .left::before,
+        .left::after,
+        .right::before,
+        .right::after {
+            background: transparent !important;
+            content: none !important;
+        }
