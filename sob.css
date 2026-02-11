@@ -38,9 +38,10 @@ body {
 #main,
 .panel,
 .panel-body {
-    background: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
+    background: var(--bg-glass);
+    border-radius: var(--radius-soft);
+    border: 1px solid rgba(169, 199, 255, 0.25);
+    box-shadow: 0 0 14px var(--border-glow);
 }
 
 /* =========================
@@ -326,3 +327,4 @@ img {
         box-shadow: 0 0 14px rgba(169,199,255,0.35);
         cursor: pointer;
     }
+
