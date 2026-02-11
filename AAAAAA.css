@@ -103,7 +103,18 @@ a {
             background: rgba(25, 30, 40, 0.85) !important;
             box-shadow: none !important;
         }
-
+/* =========================
+   Make .left boxes match <th> styling
+   ========================= */
+.left {
+    background: rgba(25, 30, 40, 0.85); /* same as table headers */
+    border-radius: 10px;
+    border: 1px solid rgba(169,199,255,0.4);
+    box-shadow: 0 0 12px rgba(169,199,255,0.25);
+    padding: 8px;
+    color: #F9F7F2; /* text color matches theme */
+    transition: all 0.3s ease;
+}
 /* =========================
    SIDEBARS / WELLS / ALERTS
    ========================= */
@@ -255,6 +266,7 @@ img {
     border: 1px solid rgba(169,199,255,0.4); /* keep border/glow */
     box-shadow: 0 0 8px rgba(169,199,255,0.25); /* keep glow effect */
 }
+
 
 
 
